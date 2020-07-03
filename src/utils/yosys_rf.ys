@@ -1,0 +1,3 @@
+read_verilog Mrf.v
+rename top gate
+write_blif Mrf.blif

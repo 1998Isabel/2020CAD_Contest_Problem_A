@@ -1,0 +1,9 @@
+.model out
+.inputs A B C D
+.outputs Y
+.names A B C D Y
+0001 1
+0100 1
+0010 1
+0110 1
+.end

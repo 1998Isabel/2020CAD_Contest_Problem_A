@@ -1,0 +1,24 @@
+.model mor4
+.inputs A B C D
+.outputs Y1 Y2
+.names A B C D Y1 Y2
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.end
+
+.model mnor4
+.inputs A B C D
+.outputs Y1 Y2
+.names A B C D Y1 Y2
+0000 1
+.end
+
+.model mnor6
+.inputs A B C D E F
+.outputs Y1 Y2
+.names A B C D E F Y1 Y2
+000000 1
+.end
+

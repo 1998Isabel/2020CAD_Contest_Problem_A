@@ -1,0 +1,7 @@
+.model top
+.inputs a[1] a[0] b[1] b[0] c[1] c[0] d[1] d[0]
+.outputs out
+.subckt gold a[1]=a[1] a[0]=a[0] b[1]=b[1] b[0]=b[0] c[1]=c[1] c[0]=c[0] d[1]=d[1] d[0]=d[0] y[1]=o1[1] y[0]=o1[0] 
+.subckt gate a[1]=a[1] a[0]=a[0] b[1]=b[1] b[0]=b[0] c[1]=c[1] c[0]=c[0] d[1]=d[1] d[0]=d[0] y[1]=o2[1] y[0]=o2[0]
+.subckt miter A=o1[1] B=o1[0] C=o2[1] D=o2[0] Y=out
+.end

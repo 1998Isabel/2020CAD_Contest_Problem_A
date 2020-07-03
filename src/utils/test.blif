@@ -1,0 +1,10 @@
+.model test
+.inputs A B C D
+.outputs Y1 Y2
+.names A B C D Y1
+1001 1
+0110 1
+1010 1
+.names A B C D Y2
+0101 1
+.end

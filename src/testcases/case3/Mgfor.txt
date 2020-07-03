@@ -1,0 +1,5 @@
+mor 26
+mor 4
+mor 6
+mnor 32
+mnor 24

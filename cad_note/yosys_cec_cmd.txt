@@ -1,0 +1,34 @@
+read_verilog DC.v;
+read_verilog HMUX.v;
+read_verilog cases/case0/gf.v;
+rename top gold;
+read_verilog cases/case0/rf.v;
+rename top gate;
+equiv_make gold gate equiv;
+hierarchy -top equiv;
+opt;
+equiv_simple;
+equiv_struct -icells;
+equiv_simple;
+equiv_status
+
+stat
+opt
+stat
+equiv_simple
+equiv_struct -icells
+stat
+equiv_simple
+equiv_status
+equiv_simple
+equiv_struct -icells
+equiv_simple
+equiv_status
+
+read_blif utils/my_std_cell.blif
+read_verilog case_test/Mgf.v
+rename top gold;
+read_verilog case_test/Mrf.v;
+rename top gate;
+read_blif utils/miter.blif
+write_blif case_test/output.blif

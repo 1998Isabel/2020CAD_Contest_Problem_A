@@ -1,0 +1,6 @@
+.model top
+.inputs A B C D
+.outputs Y
+.names A B C D Y
+
+.end

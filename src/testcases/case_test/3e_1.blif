@@ -1,0 +1,28 @@
+.model A
+.inputs x1 x2 x3
+.outputs z1
+.subckt inv i1=x1 i2=v11
+.subckt and a1=v11 a2=x3 a3=v1
+.subckt inv i1=x3 i2=v21
+.subckt and a1=x1 a2=v21 a3=v2
+.subckt inv i1=v1 i2=v31
+.subckt and a1=v31 a2=x2 a3=v3
+.subckt inv i1=v3 i2=v41
+.subckt inv i1=v2 i2=v42
+.subckt and a1=v41 a2=v42 a3=v4
+.subckt inv i1=v4 i2=z1
+.end
+
+.model and
+.inputs a1 a2
+.outputs a3
+.names a1 a2 a3
+11 1
+.end
+
+.model inv
+.inputs i1
+.outputs i2
+.names i1 i2
+0 1
+.end

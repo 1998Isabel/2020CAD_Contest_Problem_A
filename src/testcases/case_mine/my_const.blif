@@ -1,0 +1,6 @@
+.model top
+.inputs input0 input1 
+.outputs out
+.names out
+0
+.end

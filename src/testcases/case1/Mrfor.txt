@@ -1,0 +1,3 @@
+mor 4
+mnor 4
+mnor 6

@@ -1,0 +1,9 @@
+.model mbuf
+.inputs A B
+.outputs Y1 Y2
+.names A B Y1
+10 1
+11 1
+.names A B Y2
+01 1
+.end

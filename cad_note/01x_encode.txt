@@ -1,0 +1,34 @@
+python ../utils/transfer.py gf.v
+python ../utils/transfer.py rf.v
+
+yosys
+read_verilog Mgf.v
+rename top gold
+write_blif Mgf.blif
+
+read_verilog Mrf.v
+rename top gate
+write_blif Mrf.blif
+
+python ../utils/transfer_blif.py Mgf.blif
+python ../utils/transfer_blif.py Mrf.blif
+
+
+
+
+yosys
+read_verilog $Mfile.v
+stat
+write_verlog $Mfile.blif
+
+
+
+read_blif ../cases/utils/mand.blif
+read_blif ../cases/utils/mor.blif
+read_blif ../cases/utils/mnand.blif
+read_blif ../cases/utils/mnor.blif
+read_blif ../cases/utils/mnot.blif
+read_blif ../cases/utils/mbuf.blif
+read_blif ../cases/utils/mxor.blif
+read_blif ../cases/utils/m_DC.blif
+read_blif ../cases/utils/out.blif
